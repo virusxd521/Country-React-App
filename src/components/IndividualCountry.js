@@ -19,7 +19,6 @@ const IndividualCountry = ({darkMode, chaningMode}) => {
     // and the param (which we defined in the Route) will be the name of the key or attribute
     // So you can think of it as a JS Object
     const {country} = useParams();
-    console.log(country);
     const url = `https://restcountries.com/v2/name/${country}`;
 
     const fetchingData = async (url) => {
@@ -58,8 +57,6 @@ const IndividualCountry = ({darkMode, chaningMode}) => {
                     chaningMode={chaningMode}
                 />
             }
-            {console.log(apiError)}
-
         </>
     )
 }

@@ -4,7 +4,7 @@ import BackArrow from '../left-arrow.png';
 const BackButton = () => {
     return (
         <button className="back__button">
-            <img className='back__button__arrow' src={BackArrow}/>
+            <img className='back__button__arrow' alt='arrow-back' src={BackArrow}/>
             Back to Home
         </button>
     )

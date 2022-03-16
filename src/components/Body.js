@@ -46,7 +46,7 @@ const Body = ({chaningMode, darkMode}) => {
         setLoading(true);
         const response = await fetch(apiUrl);
         const data = await response.json();
-        console.log(data.status);
+        
         let randomized = [];
         if(data.status !== 404){
             randomized = await data.slice(...range(data.length -7)) 
@@ -70,24 +70,22 @@ const Body = ({chaningMode, darkMode}) => {
             fetchingData(apiRegion, setApiData)
         }
 
-        console.log(apiRandomized);    
+        
     }, [regionData])
 
     
     // Select calling this function on change
     const selectingData = e => {
         e.preventDefault();
-        console.log(e.target.value);
         setRegionData(e.target.value);
     }
 
     // on input change event handling
     const searchingForData  = e =>{
         e.preventDefault();
-        console.log(e.target.value);
         setsearchInput(e.target.value);
     }
-    
+
     return (
         <div className={darkMode ? 'dark-mode' : 'normal-mode'}>
             <Header darkMode={darkMode} chaningMode={chaningMode} />

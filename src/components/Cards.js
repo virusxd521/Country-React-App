@@ -23,13 +23,7 @@ const Cards = ({apiRandomized, data, loadingState, filteringData}) => {
     useEffect(() => {
         !!filteringData ? setFullData(data) : setFullData(apiRandomized)
     }, [filteringData])
-
-    // useEffect(() => {
-    //     // console.log(filteringData);
-    //     setFullData(data);
-    // }, [filteringData])
     
-
     return (
         <div className="cards-div">
             
