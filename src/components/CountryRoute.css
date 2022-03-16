@@ -1,0 +1,52 @@
+.main__div {
+  display: flex;
+  margin-top: 150px;
+  max-height: 400px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.flag {
+  height: 300px;
+  width: auto;
+  margin-top: 50px;
+}
+
+.main__div_data {
+  max-height: 100%;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* margin: auto; */
+}
+
+.main__div__fag-link__div {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: -80px;
+}
+
+.country__header {
+  margin-bottom: 50px;
+}
+
+.div_data__real_data_all {
+  display: flex;
+}
+
+.div_data__real_data_a {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.div_data__real_data_b {
+  margin-left: 100px;
+}
+
+.dark-mode {
+  color: white;
+}

@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+/* Sun Mode */
+.header_sun_mode {
+  background-color: white;
+  display: flex;
+  box-shadow: 0 0 5px black;
+  padding: 15px 0;
+}
+
+/* Dark Mode  */
+.header_dark_mode {
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  box-shadow: 0 0 5px black;
+  padding: 15px 0;
+}
+
+.dark-mode__div {
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+.dark-mode__div:hover {
+  cursor: pointer;
+}
+
+.dark__mode__status,
+.normal__mode__status {
+  font-size: 40px;
+}
+
+/* title Sun Mode */
+.header__title__sun {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* title Dark Mode */
+.header__title__dark {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+/* Text in dark mode */
+.dark-mode__div__paragraph {
+  margin-top: 20px;
+  color: white;
+}
+
+.normal-mode__div__paragraph {
+  margin-top: 20px;
+}
+
+.mode-changing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
