@@ -89,7 +89,7 @@
   font-weight: 400;
 }
 
-.dark-mode .borders-box li {
+.dark-mode .borders-box li:not(.no__borders) {
   background-color: antiquewhite;
 }
 
