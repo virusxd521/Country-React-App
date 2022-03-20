@@ -89,6 +89,10 @@
   font-weight: 400;
 }
 
+.dark-mode .borders-box li {
+  background-color: antiquewhite;
+}
+
 /* Showin borders on dark mode  */
 .dark-mode .no__borders {
   background-color: rgb(54, 54, 54);
@@ -99,10 +103,6 @@
 .normal-mode .no__borders {
   background-color: rgb(255, 248, 238);
   color: black;
-}
-
-.dark-mode .borders-box li {
-  background-color: antiquewhite;
 }
 
 @media (min-width: 500px) {
