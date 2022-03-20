@@ -39,7 +39,6 @@ const CountryRoute = ({data, darkMode, chaningMode}) => {
                                             !!data[0].borders ?
                                             data[0].borders.map(item =>{
                                                 return <li>{item}</li>  
-                                                
                                             })
                                         : <li className='no__borders'>No borders were found</li>
                                         }
@@ -47,7 +46,12 @@ const CountryRoute = ({data, darkMode, chaningMode}) => {
                                     </div>
                                     <div className='div_data__real_data_b'>
                                         <p><strong>Top level Domain:</strong> {data[0].topLevelDomain[0]}</p>
-                                        <p><strong>Currencies:</strong> {data[0].currencies.map(item => item.name)}</p>
+                                        <p><strong>Currencies:</strong> {
+                                        !!data[0].currencies ? 
+                                        data[0].currencies.map(item => item.name)
+                                            :
+                                             <span className='no__borders'> No currencies were found</span>
+                                        }</p>
                                         <p><strong>Languages:</strong> {data[0].languages.map(item => <p>{item.name}</p>)}</p>
 
                                     </div>

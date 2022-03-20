@@ -83,10 +83,10 @@
 
 .borders-box li[class="no__borders"] {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.5rem;
   width: 100%;
   text-align: left;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* Showin borders on dark mode  */
