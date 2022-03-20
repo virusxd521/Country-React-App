@@ -1,9 +1,11 @@
 .cards-div {
   display: flex;
   flex-wrap: wrap;
-  /* width: 80%; */
-  /* margin-left: auto; */
-
+  width: 100%;
   margin-top: 100px;
   /* padding-top: 100px; */
+}
+
+.cards-div > * {
+  margin: auto;
 }

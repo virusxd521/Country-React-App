@@ -2,34 +2,46 @@
   display: flex;
   margin-top: 150px;
   max-height: 400px;
-  width: 100%;
-  flex-wrap: wrap;
+  /* max-width: 100%; */
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  height: 100%;
 }
 
 .flag {
-  height: 300px;
+  height: 170px;
   width: auto;
-  margin-top: 50px;
+  margin: 0 auto;
+  margin-top: 30px;
+  box-shadow: 2px 2px 10px black;
+  border-radius: 4px;
 }
 
 .main__div_data {
   max-height: 100%;
-  width: 50%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  /* margin: auto; */
+  margin: 50px auto;
 }
 
-.main__div__fag-link__div {
+.main__div__flag-link__div {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  margin-top: -80px;
+  margin-top: -130px;
+  width: 100%;
+}
+
+.main__div_data__header-data {
+  display: flex;
+  flex-direction: column;
 }
 
 .country__header {
-  margin-bottom: 50px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .div_data__real_data_all {
@@ -47,6 +59,122 @@
   margin-left: 100px;
 }
 
-.dark-mode {
+/* This li tag will only be rendered when there arent any borders to the country */
+
+/* Borders which surronding the countries */
+.borders-box {
+  list-style: none;
+  color: black;
+  font-weight: 400;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.borders-box li {
+  text-align: center;
+  border-radius: 3px;
+  margin: 5px auto;
+
+  background-color: rgba(66, 66, 66, 0.2);
+  width: 70%;
+}
+
+.borders-box li[class="no__borders"] {
+  margin: 0;
+  font-size: 1rem;
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Showin borders on dark mode  */
+.dark-mode .no__borders {
+  background-color: rgb(54, 54, 54);
   color: white;
+}
+
+/* Showing border on normal mode */
+.normal-mode .no__borders {
+  background-color: rgb(255, 248, 238);
+  color: black;
+}
+
+.dark-mode .borders-box li {
+  background-color: antiquewhite;
+}
+
+@media (min-width: 500px) {
+  .borders-box li {
+    width: 40%;
+  }
+}
+
+@media (min-width: 700px) {
+  .main__div_data {
+    width: unset;
+  }
+}
+
+@media (min-width: 900px) {
+  .div_data__real_data_a {
+    width: 50%;
+  }
+
+  .flag {
+    height: 200px;
+    width: 400px;
+    margin-right: 27%;
+  }
+
+  .main__div__flag-link__div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main__div_data {
+    width: 100%;
+    margin: 30px auto;
+  }
+
+  .main__div_data__header-data {
+    margin: auto;
+    width: 60%;
+  }
+
+  .borders-box {
+    flex-direction: row;
+  }
+
+  .borders-box li {
+    width: 15%;
+    margin: 0;
+    margin-left: 2%;
+  }
+
+  .borders-box li:first-child {
+    margin-left: 0;
+  }
+
+  .no__borders {
+    background-color: rgb(202, 118, 8);
+  }
+}
+
+@media (min-width: 1200px) {
+  .flag {
+    margin-right: 36%;
+  }
+
+  .div_data__real_data_all {
+    font-size: 1.4rem;
+  }
+
+  .borders-box li {
+    font-size: 1rem;
+  }
 }

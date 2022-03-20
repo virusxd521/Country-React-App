@@ -1,6 +1,7 @@
 import CardCountry from "./CardCountry";
 import './Cards.css';
 import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
 import Placeholder from 'react-bootstrap/Placeholder';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from "react";
@@ -13,9 +14,7 @@ const Cards = ({apiRandomized, data, loadingState, filteringData}) => {
     
     const loading_array = [0,1,2,3,4,5,6,7];
     const [fullData, setFullData] = useState(apiRandomized);
-
-
-
+    
     useEffect(() => {
         setFullData(apiRandomized);
     }, [apiRandomized])
@@ -23,10 +22,9 @@ const Cards = ({apiRandomized, data, loadingState, filteringData}) => {
     useEffect(() => {
         !!filteringData ? setFullData(data) : setFullData(apiRandomized)
     }, [filteringData])
-    
+
     return (
         <div className="cards-div">
-            
             {
             filteringData !== '' ?
                 fullData.map((item, index) => {
@@ -34,6 +32,7 @@ const Cards = ({apiRandomized, data, loadingState, filteringData}) => {
                     if(!!item.name.common){
                         if(item.name.common.includes(filteringData)){
                             return <CardCountry 
+                              
                                 key={index} 
                                 name={item.name.common || item.name}  
                                 flag={item.flags.svg}
@@ -47,6 +46,7 @@ const Cards = ({apiRandomized, data, loadingState, filteringData}) => {
                     } else if(item.name.includes(filteringData)){
                         
                         return  <CardCountry 
+                   
                             key={index} 
                             name={item.name.common || item.name}  
                             flag={item.flags.svg}
@@ -65,6 +65,7 @@ const Cards = ({apiRandomized, data, loadingState, filteringData}) => {
                     fullData.map((item, index) => {
                         
                         return <CardCountry 
+            
                             key={index} 
                             name={item.name.common || item.name}  
                             flag={item.flags.png}

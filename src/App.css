@@ -1,5 +1,11 @@
+html,
+body {
+  min-height: 100%;
+}
+
 .App {
   min-height: 100vh;
+
   /* overflow: scroll; */
   position: absolute;
   width: 100%;

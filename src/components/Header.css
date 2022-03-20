@@ -27,14 +27,16 @@
 
 .dark__mode__status,
 .normal__mode__status {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 /* title Sun Mode */
 .header__title__sun {
-  margin-left: 20px;
+  margin-left: 5%;
   margin-top: 20px;
   font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 /* title Dark Mode */
@@ -43,6 +45,8 @@
   margin-top: 20px;
   font-family: "Montserrat", sans-serif;
   color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 /* Text in dark mode */

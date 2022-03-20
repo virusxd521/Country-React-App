@@ -10,12 +10,13 @@ const CountryRoute = ({data, darkMode, chaningMode}) => {
             <Header 
                 darkMode={darkMode} chaningMode={chaningMode}
             />
+            {console.log(data)}
             
             {
                 data[0] && data[0].flag ?
                 <div className='main__div'>
-                    <div className='main__div__fag-link__div'>
-                        <Link to='/'>
+                    <div className='main__div__flag-link__div'>
+                        <Link className='back__button__a-tag' to='/'>
                             <BackButton />
                         </Link>
                         <img className='flag' src={data[0].flag} />                    
@@ -32,6 +33,17 @@ const CountryRoute = ({data, darkMode, chaningMode}) => {
                                         <p><strong>Sub Region:</strong> {data[0].subregion}</p>
                                         <p><strong>Population:</strong> {data[0].population}</p>
                                         <p><strong>Capital:</strong> {data[0].capital}</p>
+                                        <p><strong>Borders:</strong></p>
+                                        <ul className="borders-box"> 
+                                            {
+                                            !!data[0].borders ?
+                                            data[0].borders.map(item =>{
+                                                return <li>{item}</li>  
+                                                
+                                            })
+                                        : <li className='no__borders'>No borders were found</li>
+                                        }
+                                        </ul>
                                     </div>
                                     <div className='div_data__real_data_b'>
                                         <p><strong>Top level Domain:</strong> {data[0].topLevelDomain[0]}</p>

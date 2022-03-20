@@ -1,9 +1,19 @@
 .dark-mode {
-  background-color: rgb(27, 27, 27);
+  background-color: rgb(54, 54, 54);
   min-height: 100vh;
+  color: white;
+  overflow: scroll;
 }
 
 .normal-mode {
   background-color: rgb(255, 248, 238);
   min-height: 100vh;
+  overflow: scroll;
+}
+
+@media (min-width: 700px) {
+  .normal-mode,
+  .dark-mode {
+    min-height: 100vh;
+  }
 }
