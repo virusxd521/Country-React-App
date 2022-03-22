@@ -2,6 +2,9 @@ import {Link} from 'react-router-dom';
 import Header from './Header';
 import BackButton from './BackButton';
 import './CountryRoute.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from 'react-bootstrap/Card';
+import Placeholder from 'react-bootstrap/Placeholder';
 
 
 const CountryRoute = ({data, darkMode, chaningMode}) => {
@@ -54,10 +57,11 @@ const CountryRoute = ({data, darkMode, chaningMode}) => {
                                             :
                                              <span className='no__borders'> No currencies were found</span>
                                         }</p>
-                                        <p><strong>Languages:</strong>
-                                            {data[0].languages.map((item, index) => <span key={index}>{item.name}</span>)}
-                                            
+                                        <p><strong>Languages:</strong>                                            
                                         </p>
+                                        {data[0].languages.map((item, index) => <>
+                                        <span key={index +5}>{item.name}</span> 
+                                        </>)}
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +69,18 @@ const CountryRoute = ({data, darkMode, chaningMode}) => {
                     </div>
                 </div> 
                 :
-                <h1>Loading...</h1>
+                    <Card style={{ width: '40rem', height: '20rem', borderRadius: '10px' , margin: ' 7% auto' }}>
+                        <Card.Body>
+                        <Placeholder as={Card.Title} animation="glow">
+                        <Placeholder xs={6} />
+                        </Placeholder>
+                        <Placeholder as={Card.Text} animation="glow">
+                        <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
+                        <Placeholder xs={6} /> <Placeholder xs={8} />
+                        </Placeholder>
+                        <Placeholder.Button variant="primary" xs={6} />
+                        </Card.Body>
+                    </Card>                 
             }
 
         </div>

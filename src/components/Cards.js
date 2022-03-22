@@ -1,7 +1,6 @@
 import CardCountry from "./CardCountry";
 import './Cards.css';
 import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
 import Placeholder from 'react-bootstrap/Placeholder';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from "react";
