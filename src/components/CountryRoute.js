@@ -13,7 +13,7 @@ const CountryRoute = ({data, darkMode, chaningMode}) => {
             <Header 
                 darkMode={darkMode} chaningMode={chaningMode}
             />
-            {console.log(data)}
+            {/* {console.log(data)} */}
             
             {
                 data[0] && data[0].flag ?

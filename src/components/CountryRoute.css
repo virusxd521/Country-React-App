@@ -91,6 +91,7 @@
 
 .dark-mode .borders-box li:not(.no__borders) {
   background-color: antiquewhite;
+  color: rgb(92, 92, 92);
 }
 
 /* Showin borders on dark mode  */
